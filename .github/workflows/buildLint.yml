@@ -43,8 +43,8 @@ jobs:
 
             - name: Build lint and test
               env:
-                  BAMBOO_HR_API_USERNAME: ${{ secrets.OPEN_WEATHER_API_KEY }}
-                  BAMBOO_HR_API_BASE_URL: "https://api.openweathermap.org/data/2.5/weather"
+                  OPEN_WEATHER_API_KEY: ${{ secrets.OPEN_WEATHER_API_KEY }}
+                  OPEN_WEATHER_API_URL: "https://api.openweathermap.org/data/2.5/weather"
               run: |
                   yarn lint
                   yarn test
