@@ -1,0 +1,26 @@
+service: serverless-test
+frameworkVersion: "2"
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: production
+  lambdaHashingVersion: '20201221'
+  iamManagedPolicies:
+    - "arn:aws:iam::382498506946:policy/s3_hris_assets"
+  region: ap-southeast-2
+  timeout: 900
+  environment:
+    ALLOWS_INSECURE_SSL_CERTIFICATES: true
+    HRIS_BUCKET_NAME: "hris-assets"
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+
+functions:
+  weatherApi:
+    handler: src/handlers/weather.handler
+    
