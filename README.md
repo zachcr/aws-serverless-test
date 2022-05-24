@@ -1,10 +1,19 @@
 # Check you weather api!
 
+## Overview:
 Going to work is part of your routine and you like to plan ahead of time. You have a chat bot which you use everyday to see your calendar. You want to add a new feature to your chat bot to see today's weather, so you wear accordingly. For this chat bot, you want to write an api using AWS serverless which takes a postcode as an input and return back weather information.
 
-    GET https://api.openweathermap.org/data/2.5/weather?zip=2000,au&appid={apikey}
+For this code we have used open weather map which provide the ability to get weather information by postcode and the sample code has been provided below. Please feel free to use any other api you like.
 
-   ``` 
+    
+### Endpoint: 
+``` 
+GET https://api.openweathermap.org/data/2.5/weather?zip=2000,au&appid={apikey}
+```
+
+### Payload
+
+``` 
    {
        "coord": {
            "lon": 150.8667,
@@ -45,29 +54,71 @@ Going to work is part of your routine and you like to plan ahead of time. You ha
         "id": 0,
         "name": "Schofields",
         "cod": 200
-    } ```
+    } 
+```
 
-# Files
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+## Getting Started
 
-## Create files and folders
+```
+.
+├── README.md
+├── jest.config.js
+├── package.json
+├── serverless.yml
+├── src
+│   ├── @types
+│   │   ├── httpOptions.ts
+│   │   └── index.ts
+│   ├── api
+│   │   └── index.ts
+│   ├── handlers
+│   │   ├── return.ts
+│   │   └── weather.ts
+│   ├── index.ts
+│   ├── services
+│   │   ├── index.ts
+│   │   └── weather.ts
+│   └── utils
+│       ├── httpClient.ts
+│       ├── httpException.ts
+│       ├── httpResponse.ts
+│       └── index.ts
+└── yarn.lock
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+```
 
-## Switch to another file
+Some pre baked code has been provided to kick start the project.
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+- src -> Utils: all the utility functions like http client are located here. Extend them to make api calls
+- src -> handler: entry point for your serverless app
+- jest.config.js -> Jest is used for testing
+- serverless.yml -> Although we have provided serverless within the project but is not mandatory to use. User the famework of your choice to deploy your app
 
-## Rename a file
+### Task
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+- Implement a working api which take postcode and country code and return back the weather.
+- return data in below format
+  - ``` {
+            "lon": 150.8667,
+            "lat": -33.7167,
+            "main": "Clouds",
+            "description": "overcast clouds",
+            "temp": 290.27,
+            "feels_like": 290.23,
+            "temp_min": 288.57,
+            "temp_max": 291.11,
+            "pressure": 1028,
+            "humidity": 84
+        }
+    ```
+- validate input and throw relevant errors
+- implement basic security around your api
 
-## Delete a file
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+## Submission
+Please document your solution in the SOLUTION.md file. This should explain why you've made the design choices that you have and clarify anything you feel isn't obvious. Feel free to also include what else you would have done given more time.
 
-## Export a file
+Please include instructions on how to run your app if it is not using the boilerplate provided.
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
-
+Once completed, please upload your solution to a public Github repo and share the link with careers@bilue.com.au
