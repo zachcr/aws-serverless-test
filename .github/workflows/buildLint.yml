@@ -43,13 +43,8 @@ jobs:
 
             - name: Build lint and test
               env:
-                  BAMBOO_HR_API_USERNAME: ${{ secrets.BAMBOO_HR_API_USERNAME }}
-                  BAMBOO_HR_API_PASSWORD: ${{ secrets.BAMBOO_HR_API_PASSWORD }}
-                  BAMBOO_HR_API_BASE_URL: "https://api.bamboohr.com/api/gateway.php/bilue/v1"
-                  GREENHOUSE_HR_API_USERNAME: ${{ secrets.GREENHOUSE_HR_API_USERNAME }}
-                  GREENHOUSE_HR_API_BASE_URL: "https://harvest.greenhouse.io/v1"
-                  ALLOWS_INSECURE_SSL_CERTIFICATES: true
-                  HRIS_BUCKET_NAME: ${{ secrets.HRIS_BUCKET_NAME }}
+                  BAMBOO_HR_API_USERNAME: ${{ secrets.OPEN_WEATHER_API_KEY }}
+                  BAMBOO_HR_API_BASE_URL: "https://api.openweathermap.org/data/2.5/weather"
               run: |
                   yarn lint
                   yarn test
