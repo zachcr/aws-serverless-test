@@ -1,5 +1,7 @@
 # Check you weather api!
 
+Welcome to the Bilue AWS Engineer Tech Challenge! The purpose of this challenge is to help us assess your technical skills. We know that you have limited time to devote to this task and may not be able to provide the complete solution as you would given more time, so we suggest you focus on the core requirements first, then any additional features if you have time left over.
+
 ## Overview:
 Going to work is part of your routine and you like to plan ahead of time. You have a chat bot which you use everyday to see your calendar. You want to add a new feature to your chat bot to see today's weather, so you wear accordingly. For this chat bot, you want to write an api using AWS serverless which takes a postcode as an input and return back weather information.
 
@@ -60,6 +62,8 @@ GET https://api.openweathermap.org/data/2.5/weather?zip=2000,au&appid={apikey}
 
 ## Getting Started
 
+We have provided a bit of boilerplate code that you can use to get started. You are not required to use this boilerplate, so feel free to throw it all away and start fresh if you prefer.
+
 ```
 .
 ├── README.md
@@ -88,18 +92,26 @@ GET https://api.openweathermap.org/data/2.5/weather?zip=2000,au&appid={apikey}
 
 ```
 
-Some pre baked code has been provided to kick start the project.
-
 - src -> Utils: all the utility functions like http client are located here. Extend them to make api calls
 - src -> handler: entry point for your serverless app
 - jest.config.js -> Jest is used for testing
-- serverless.yml -> Although we have provided serverless within the project but is not mandatory to use. User the famework of your choice to deploy your app
+- serverless.yml -> Although we have provided serverless within the project but is not mandatory to use. Use the framework of your choice to deploy your app
+
+### How to Use this test
+
+This repo provide you with a problem statement and a boilerplate. Either fork this repo or create your own github repo to create your own version of the solution.
+
+You can either submit:
+
+- the github link your forked repo which we can deploy in our environment
+- the github link to your forked repo along with url to the working API in aws cloud.
 
 ### Task
 
 - Implement a working api which take postcode and country code and return back the weather.
-- return data in below format
-  - ``` {
+- Return data in below format
+  - ``` 
+        {
             "lon": 150.8667,
             "lat": -33.7167,
             "main": "Clouds",
@@ -112,8 +124,8 @@ Some pre baked code has been provided to kick start the project.
             "humidity": 84
         }
     ```
-- validate input and throw relevant errors
-- implement basic security around your api
+- Validate input and throw relevant errors
+- Implement basic security around your api
 
 
 ## Submission
