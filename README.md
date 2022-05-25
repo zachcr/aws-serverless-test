@@ -1,11 +1,11 @@
-# Check you weather api!
+# Weather api!
 
 Welcome to the Bilue AWS Engineer Tech Challenge! The purpose of this challenge is to help us assess your technical skills. We know that you have limited time to devote to this task and may not be able to provide the complete solution as you would given more time, so we suggest you focus on the core requirements first, then any additional features if you have time left over.
 
-## Overview:
-Going to work is part of your routine and you like to plan ahead of time. You have a chat bot which you use everyday to see your calendar. You want to add a new feature to your chat bot to see today's weather, so you wear accordingly. For this chat bot, you want to write an api using AWS serverless which takes a postcode as an input and return back weather information.
+## Problem Statement:
+Going to work is part of your routine and you like to plan ahead of time. You have a chat bot which you use everyday to see your calendar. You want to add a new feature to your chat bot to see today's weather. For this chat bot, you want to write an api using AWS serverless which takes a postcode as an input and return back weather information.
 
-For this code we have used open weather map which provide the ability to get weather information by postcode and the sample code has been provided below. Please feel free to use any other api you like.
+We have used open weather map which provide the ability to get weather information by postcode and the sample code has been provided below. Please feel free to use any other api you like.
 
     
 ### Endpoint: 
