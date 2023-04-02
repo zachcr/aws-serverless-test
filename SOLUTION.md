@@ -1,4 +1,6 @@
 ### Solution
+
+``` 
 ├── README.md
 ├── jest.config.js
 ├── package.json
@@ -43,6 +45,8 @@
 |   |   |    |   └── Coord.ts
 │   └── index.ts
 └── yarn.lock
+
+``` 
 
 Used DDD framework to adjust the whole project.
 Abstrcted a `DomainModel` named Weather, which connected with `domainService` named getWeather and upsertWeather, `DomainService` functions are allowed requested by `adapter` layer. 
