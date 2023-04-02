@@ -22,11 +22,17 @@
     "aws-lambda": "^1.0.7",
     "axios": "^0.24.0",
     "axios-retry": "^3.2.4",
+    "got": "^12.6.0",
+    "ioredis": "^5.3.1",
     "moment": "^2.29.1",
+    "mongoose": "^7.0.3",
     "tslib": "~2.3.1"
   },
   "devDependencies": {
+    "@types/got": "^9.6.12",
+    "@types/ioredis": "^5.0.0",
     "@types/jest": "~27.0.2",
+    "@types/mongoose": "^5.11.97",
     "@types/node": "~16.11.6",
     "@typescript-eslint/eslint-plugin": "~5.7.0",
     "@typescript-eslint/parser": "~5.7.0",
